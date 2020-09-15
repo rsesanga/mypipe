@@ -7,18 +7,17 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'make' 
+                sh 'echo "My name is rodrigue"' 
             }
         }
         stage('Test'){
             steps {
-                sh 'make check'
-                junit 'reports/**/*.xml' 
+                sh 'echo "you and me"'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'make publish'
+                sh 'echo "it is deployed"'
             }
         }
     }
